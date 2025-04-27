@@ -64,8 +64,8 @@ function numberCount() {
     let randomTarget = Math.floor(Math.random() * (targetCount - startCount)) + startCount;
 
     const counter = setInterval(() => {
-        offerCount.innerText = `${startCount}%`;
-        finalValue = startCount++;
+        offerCount.innerText = `${randomTarget}%`;
+        finalValue = randomTarget;
 
         if (finalValue > randomTarget) {
             clearInterval(counter);

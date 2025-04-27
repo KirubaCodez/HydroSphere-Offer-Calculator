@@ -67,7 +67,7 @@ function numberCount() {
         offerCount.innerText = `${randomTarget}%`;
         finalValue = randomTarget;
 
-        if (finalValue > randomTarget) {
+        if (finalValue) {
             clearInterval(counter);
             setTimeout(() => {
                 if (!blast.classList.contains("active")) {

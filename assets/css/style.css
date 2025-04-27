@@ -355,7 +355,6 @@ footer .footer-desc {
     .submitBtn {
         font-size: 16px;
     }
-    .result-description,
     .err,
     footer .footer-desc {
         font-size: 12px;
@@ -364,6 +363,7 @@ footer .footer-desc {
         max-width: 95%;
         padding: 50px 15px;
     }
+    .result-description,
     footer p {
         font-size: 14px;
     }

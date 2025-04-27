@@ -59,8 +59,8 @@ function numberCount() {
     const offerCount = document.getElementById("percentCount");
     const description = document.getElementById("description");
     const blast = document.querySelector(".blast-effect");
-    let startCount = 8;
-    let targetCount = 20;
+    let startCount = 5;
+    let targetCount = 15;
     let randomTarget = Math.floor(Math.random() * (targetCount - startCount)) + startCount;
 
     const counter = setInterval(() => {

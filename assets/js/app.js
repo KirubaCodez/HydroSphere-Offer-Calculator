@@ -62,12 +62,13 @@ function numberCount() {
     let startCount = 5;
     let targetCount = 15;
     let randomTarget = Math.floor(Math.random() * (targetCount - startCount)) + startCount;
+    let currentCount = 0;
 
     const counter = setInterval(() => {
-        offerCount.innerText = `${randomTarget}%`;
-        finalValue = randomTarget;
-
-        if (finalValue) {
+        if (currentCount != randomTarget) {
+            currentCount++;
+            offerCount.innerText = `${currentCount}%`;
+        } else {
             clearInterval(counter);
             setTimeout(() => {
                 if (!blast.classList.contains("active")) {
@@ -77,12 +78,12 @@ function numberCount() {
                 }
             }, 500);
         }
-    }, 50);
+    }, 50)
 
     setTimeout(() => {
         let user = userName.value.trim();
         let properUser = user.charAt(0).toUpperCase() + user.slice(1).toLowerCase();
-        description.innerText = `Congratulations, ${properUser}! 🎉 Enjoy your ${finalValue}% offer!`;
+        description.innerText = `Congratulations, ${properUser}! 🎉 Enjoy your ${randomTarget}% offer!`;
     }, 500);
 }
 
